@@ -8,9 +8,8 @@
 </p>
 
 <p align="center"><em>In memory of Kobe Bryant</em></p>
-> "What can I say, Mamba out."
->
-> — *Kobe Bryant, NBA farewell speech, 2016*
+
+> "What can I say, Mamba out." — *Kobe Bryant, NBA farewell speech, 2016*
 
 
 
