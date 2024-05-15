@@ -31,7 +31,7 @@ Figure 2: The mechanism illustration of causal attention and RNN-like models fro
 <br>
 
 ![MambaOut third figure](https://raw.githubusercontent.com/yuweihao/misc/master/MambaOut/mambaout_third_figure.png)
-Figure 3: (a) Two modes of token mixing. For a total of $T$ tokens, the fully-visible mode allows token $t$ to aggregate inputs from all tokens, i.e., $\{xi\}_{i=1}^{T}$, to compute its output $y_t$. In contrast, the causal mode restricts token $t$ to only aggregate inputs from preceding and current tokens $\{x_i\}_{i=1}^{t}$. By default, attention operates in fully-visible mode but can be adjusted to causal mode with causal attention masks. RNN-like models, such as Mamba's SSM, inherently operate in causal mode due to their recurrent nature. (b) **We modify the ViT's attention from fully-visible to causal mode and observe performance drop on ImageNet, which indicates causal mixing is unnecessary for understanding tasks.**
+Figure 3: (a) Two modes of token mixing. For a total of $T$ tokens, the fully-visible mode allows token $t$ to aggregate inputs from all tokens, i.e., $\{x_i\}_{i=1}^{T}$, to compute its output $y_t$. In contrast, the causal mode restricts token $t$ to only aggregate inputs from preceding and current tokens $\{x_i\}_{i=1}^{t}$. By default, attention operates in fully-visible mode but can be adjusted to causal mode with causal attention masks. RNN-like models, such as Mamba's SSM, inherently operate in causal mode due to their recurrent nature. (b) **We modify the ViT's attention from fully-visible to causal mode and observe performance drop on ImageNet, which indicates causal mixing is unnecessary for understanding tasks.**
 
 
 
@@ -112,7 +112,7 @@ Training scripts of other models are shown in [scripts](/scripts/).
 ```
 @article{yu2024mambaout,
   title={MambaOut: Do We Really Need Mamba for Vision?},
-  author={Yu, Weihao and and Wang, Xinchao},
+  author={Yu, Weihao and Wang, Xinchao},
   journal={arXiv preprint arXiv:2405.07992},
   year={2024}
 }
