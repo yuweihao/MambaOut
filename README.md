@@ -1,8 +1,10 @@
 # [MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992)
 
-<p align="left">
+<p align="center">
 <a href="https://arxiv.org/abs/2405.07992" alt="arXiv">
     <img src="https://img.shields.io/badge/arXiv-2405.07992-b31b1b.svg?style=flat" /></a>
+<a href="https://huggingface.co/spaces/whyu/MambaOut" alt="Hugging Face Spaces">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue" /></a>
 <a href="https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing" alt="Colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
 </p>
@@ -68,7 +70,9 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 
 
 #### Usage
-We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing)
+We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing).
+
+A web demo is shown at [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/whyu/MambaOut).
 
 
 ## Validation
