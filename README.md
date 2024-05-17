@@ -75,7 +75,7 @@ We also provide a Colab notebook which runs the steps to perform inference with 
 ## Gradio demo
 A web demo is shown at [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/whyu/MambaOut). You can also easily run gradio demo locally. Besides PyTorch and timm==0.6.11, please install gradio by `pip install gradio`, then run
 ```bash
-python app.py
+python gradio_demo/app.py
 ```
 
 ## Validation
