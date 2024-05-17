@@ -73,11 +73,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing).
 
 ## Gradio demo
-A web demo is shown at [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/whyu/MambaOut). You can also easily run gradio demo locally. Besides PyTorch and timm==0.6.11, please install gradio by `pip install gradio`, then git clone the MambaOut gradio demo
-```bash
-git clone https://huggingface.co/spaces/whyu/MambaOut MambaOut_gradio && cd MambaOut_gradio
-```
-Then run
+A web demo is shown at [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/whyu/MambaOut). You can also easily run gradio demo locally. Besides PyTorch and timm==0.6.11, please install gradio by `pip install gradio`, then run
 ```bash
 python app.py
 ```
