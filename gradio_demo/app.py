@@ -35,7 +35,7 @@ def download_image(url, filename):
 image_list = ["Kobe_Bryant_2014.jpg", "Kobe_coffee.jpg"]
 
 for img in image_list:
-  image_url = f"https://huggingface.co/spaces/whyu/MambaOut/resolve/main/images/{img}"
+  image_url = f"https://raw.githubusercontent.com/yuweihao/misc/master/MambaOut/{img}"
   file_path = f"{img}"
   download_image(image_url, file_path)
 
