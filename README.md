@@ -116,7 +116,7 @@ Training scripts of other models are shown in [scripts](/scripts/).
 
 
 ## Tutorial to compute Transformer FLOPs
-This [tutorial](https://github.com/yuweihao/misc/blob/master/MambaOut/mambaout_eq8_tutorial.pdf) shows how to compute FLOPs of a Transformer (Equation 8 in the paper). Welcome feedback, and I will continually improve it.
+This [tutorial](https://github.com/yuweihao/misc/blob/master/MambaOut/mambaout_eq6_tutorial.pdf) shows how to compute FLOPs of a Transformer (Equation 6 in the paper). Welcome feedback, and I will continually improve it.
 
 ## Bibtex
 ```
