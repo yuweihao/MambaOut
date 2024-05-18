@@ -33,7 +33,7 @@ Figure 2: The mechanism illustration of causal attention and RNN-like models fro
 <br>
 
 ![MambaOut third figure](https://raw.githubusercontent.com/yuweihao/misc/master/MambaOut/mambaout_third_figure.png)
-Figure 3: (a) Two modes of token mixing. For a total of $T$ tokens, the fully-visible mode allows token $t$ to aggregate inputs from all tokens, i.e., $\{x_i\}_{i=1}^{T}$, to compute its output $y_t$. In contrast, the causal mode restricts token $t$ to only aggregate inputs from preceding and current tokens $\{x_i\}_{i=1}^{t}$. By default, attention operates in fully-visible mode but can be adjusted to causal mode with causal attention masks. RNN-like models, such as Mamba's SSM, inherently operate in causal mode due to their recurrent nature. (b) **We modify the ViT's attention from fully-visible to causal mode and observe performance drop on ImageNet, which indicates causal mixing is unnecessary for understanding tasks.**
+Figure 3: (a) Two modes of token mixing. For a total of $T$ tokens, the fully-visible mode allows token $t$ to aggregate inputs from all tokens, i.e., $ \{x_i\}_{i=1}^{T} $, to compute its output $y_t$. In contrast, the causal mode restricts token $t$ to only aggregate inputs from preceding and current tokens $ \{x_i\}_{i=1}^{t} $. By default, attention operates in fully-visible mode but can be adjusted to causal mode with causal attention masks. RNN-like models, such as Mamba's SSM, inherently operate in causal mode due to their recurrent nature. (b) **We modify the ViT's attention from fully-visible to causal mode and observe performance drop on ImageNet, which indicates causal mixing is unnecessary for understanding tasks.**
 
 
 
@@ -114,6 +114,9 @@ cd $CODE_PATH && sh distributed_train.sh $NUM_GPU $DATA_PATH \
 ```
 Training scripts of other models are shown in [scripts](/scripts/).
 
+
+## Tutorial to compute Transformer FLOPs
+This [tutorial](https://github.com/yuweihao/misc/blob/master/MambaOut/mambaout_eq8_tutorial.pdf) shows how to compute FLOPs of a Transformer (Equation 8 in the paper). Welcome feedback, and I will continually improve it.
 
 ## Bibtex
 ```
