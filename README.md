@@ -64,10 +64,12 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 | Model | Resolution | Params | MACs | Top1 Acc |
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |
 | [mambaout_femto](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_femto.pth) | 224 | 7.3M | 1.2G | 78.9 |
+| [mambaout_kobe](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_kobe.pth)\* | 224 | 9.1M | 1.5G | 80.0 |
 | [mambaout_tiny](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_tiny.pth) | 224 | 26.5M | 4.5G | 82.7 |
 | [mambaout_small](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_small.pth) | 224 | 48.5M | 9.0G | 84.1 |
 | [mambaout_base](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_base.pth) | 224 | 84.8M | 15.8G | 84.2 |
 
+\* Kobe Memorial Vision with 24 Gated CNN blocks
 
 #### Usage
 We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing).
@@ -116,7 +118,7 @@ Training scripts of other models are shown in [scripts](/scripts/).
 
 
 ## Tutorial to compute Transformer FLOPs
-This [tutorial](https://github.com/yuweihao/misc/blob/master/MambaOut/mambaout_eq6_tutorial.pdf) shows how to compute FLOPs of a Transformer (Equation 6 in the paper). Welcome feedback, and I will continually improve it.
+This [tutorial](https://github.com/yuweihao/MambaOut/issues/210) shows how to compute FLOPs of a Transformer (Equation 6 in the paper). Welcome feedback, and I will continually improve it.
 
 ## Bibtex
 ```

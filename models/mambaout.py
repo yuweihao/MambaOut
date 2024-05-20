@@ -27,6 +27,8 @@ def _cfg(url='', **kwargs):
 default_cfgs = {
     'mambaout_femto': _cfg(
         url='https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_femto.pth'),
+    'mambaout_kobe': _cfg(
+        url='https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_kobe.pth'),
     'mambaout_tiny': _cfg(
         url='https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_tiny.pth'),
     'mambaout_small': _cfg(
@@ -264,6 +266,21 @@ def mambaout_femto(pretrained=False, **kwargs):
         dims=[48, 96, 192, 288],
         **kwargs)
     model.default_cfg = default_cfgs['mambaout_femto']
+    if pretrained:
+        state_dict = torch.hub.load_state_dict_from_url(
+            url= model.default_cfg['url'], map_location="cpu", check_hash=True)
+        model.load_state_dict(state_dict)
+    return model
+
+
+# Kobe Memorial Vision with 24 Gated CNN blocks
+@register_model
+def mambaout_kobe(pretrained=False, **kwargs):
+    model = MambaOut(
+        depths=[3, 3, 15, 3],
+        dims=[48, 96, 192, 288],
+        **kwargs)
+    model.default_cfg = default_cfgs['mambaout_kobe']
     if pretrained:
         state_dict = torch.hub.load_state_dict_from_url(
             url= model.default_cfg['url'], map_location="cpu", check_hash=True)
