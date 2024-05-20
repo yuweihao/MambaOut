@@ -33,7 +33,7 @@ Figure 2: The mechanism illustration of causal attention and RNN-like models fro
 <br>
 
 ![MambaOut third figure](https://raw.githubusercontent.com/yuweihao/misc/master/MambaOut/mambaout_third_figure.png)
-Figure 3: (a) Two modes of token mixing. For a total of $T$ tokens, the fully-visible mode allows token $t$ to aggregate inputs from all tokens, i.e., $ \{x_i\}_{i=1}^{T} $, to compute its output $y_t$. In contrast, the causal mode restricts token $t$ to only aggregate inputs from preceding and current tokens $ \{x_i\}_{i=1}^{t} $. By default, attention operates in fully-visible mode but can be adjusted to causal mode with causal attention masks. RNN-like models, such as Mamba's SSM, inherently operate in causal mode due to their recurrent nature. (b) **We modify the ViT's attention from fully-visible to causal mode and observe performance drop on ImageNet, which indicates causal mixing is unnecessary for understanding tasks.**
+Figure 3: (a) Two modes of token mixing. For a total of $T$ tokens, the fully-visible mode allows token $t$ to aggregate inputs from all tokens, i.e., $ \left\{ x_i \right\}_{i=1}^{T} $, to compute its output $y_t$. In contrast, the causal mode restricts token $t$ to only aggregate inputs from preceding and current tokens $ \left\{ x_i \right\}_{i=1}^{t} $. By default, attention operates in fully-visible mode but can be adjusted to causal mode with causal attention masks. RNN-like models, such as Mamba's SSM, inherently operate in causal mode due to their recurrent nature. (b) **We modify the ViT's attention from fully-visible to causal mode and observe performance drop on ImageNet, which indicates causal mixing is unnecessary for understanding tasks.**
 
 
 
@@ -69,7 +69,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 | [mambaout_small](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_small.pth) | 224 | 48.5M | 9.0G | 84.1 |
 | [mambaout_base](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_base.pth) | 224 | 84.8M | 15.8G | 84.2 |
 
-\* [Kobe Memorial Vision](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019) with 24 Gated CNN blocks. MambaOut-Kobe achieves really competitive performance, surpassing ResNet-50 and ViT-S with much fewer parameters and FLOPs. For example, MambaOut-Kobe outperforms ResNet-50 (ResNet strikes back) by 0.2% accuracy with only 36% parameters and MACs.
+\* [Kobe Memorial Vision](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019) with 24 Gated CNN blocks. MambaOut-Kobe achieves really competitive performance, surpassing ResNet-50 and ViT-S with much fewer parameters and FLOPs. For example, **MambaOut-Kobe outperforms ViT-S by 0.2% accuracy with only 41% parameters and 33% FLOPs**.
 
 #### Usage
 We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing).
