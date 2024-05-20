@@ -21,6 +21,11 @@
 
 This is a PyTorch implementation of MambaOut proposed by our paper "[MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992)". 
 
+## Updates
+* 20 May 2024: Release MambaOut-Kobe model version with 24 Gated CNN blocks suggested by [Issue #5](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019). **MambaOut-Kobe outperforms ViT-S by 0.2% accuracy with only 41% parameters and 33% FLOPs**. See [Models](#models).
+
+* 18 May 2024: Add a [tutorial](https://github.com/yuweihao/MambaOut/issues/210) on counting Transformer FLOPs (Equation 6 in the paper).
+---
 
 ![MambaOut first figure](https://raw.githubusercontent.com/yuweihao/misc/master/MambaOut/mambaout_first_figure.png)
 Figure 1: (a) Architecture of Gated CNN and Mamba blocks (omitting Normalization and shortcut). The Mamba block extends the Gated CNN with an additional state space model (SSM). As will be conceptually discussed in Section 3, SSM is not necessary for image classification on ImageNet. To empirically verify this claim, we stack Gated CNN blocks to build a series of models named MambaOut.(b) MambaOut outperforms visual Mamba models, e.g., Vision Mamhba, VMamba and PlainMamba, on ImageNet image classification. 
@@ -69,7 +74,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 | [mambaout_small](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_small.pth) | 224 | 48.5M | 9.0G | 84.1 |
 | [mambaout_base](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_base.pth) | 224 | 84.8M | 15.8G | 84.2 |
 
-\* [Kobe Memorial Vision](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019) with 24 Gated CNN blocks. MambaOut-Kobe achieves really competitive performance, surpassing ResNet-50 and ViT-S with much fewer parameters and FLOPs. For example, **MambaOut-Kobe outperforms ViT-S by 0.2% accuracy with only 41% parameters and 33% FLOPs**.
+\* [Kobe Memorial Version](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019) with 24 Gated CNN blocks. 
 
 #### Usage
 We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing).
@@ -117,8 +122,9 @@ cd $CODE_PATH && sh distributed_train.sh $NUM_GPU $DATA_PATH \
 Training scripts of other models are shown in [scripts](/scripts/).
 
 
-## Tutorial to compute Transformer FLOPs
-This [tutorial](https://github.com/yuweihao/MambaOut/issues/210) shows how to compute FLOPs of a Transformer (Equation 6 in the paper). Welcome feedback, and I will continually improve it.
+## Tutorial on counting Transformer FLOPs
+This [tutorial](https://github.com/yuweihao/MambaOut/issues/210) shows how to count Transformer FLOPs (Equation 6 in the paper). Welcome feedback, and I will continually improve it.
+
 
 ## Bibtex
 ```
