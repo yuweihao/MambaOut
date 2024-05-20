@@ -69,7 +69,7 @@ Data preparation: ImageNet with the following folder structure, you can extract 
 | [mambaout_small](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_small.pth) | 224 | 48.5M | 9.0G | 84.1 |
 | [mambaout_base](https://github.com/yuweihao/MambaOut/releases/download/model/mambaout_base.pth) | 224 | 84.8M | 15.8G | 84.2 |
 
-\* Kobe Memorial Vision with 24 Gated CNN blocks
+\* [Kobe Memorial Vision](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019) with 24 Gated CNN blocks.
 
 #### Usage
 We also provide a Colab notebook which runs the steps to perform inference with MambaOut: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1DTJRsPczV0pOwmFhEjSWyI2NqQoR_u-K?usp=sharing).

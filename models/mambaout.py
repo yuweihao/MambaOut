@@ -273,7 +273,7 @@ def mambaout_femto(pretrained=False, **kwargs):
     return model
 
 
-# Kobe Memorial Vision with 24 Gated CNN blocks
+# Kobe Memorial Version with 24 Gated CNN blocks
 @register_model
 def mambaout_kobe(pretrained=False, **kwargs):
     model = MambaOut(
