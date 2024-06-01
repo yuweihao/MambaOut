@@ -121,17 +121,17 @@ class GatedCNNBlock(nn.Module):
     Args: 
         conv_ratio: control the number of channels to conduct depthwise convolution.
             Conduct convolution on partial channels can improve paraitcal efficiency.
-            The idea of partical channels is from ShuffleNet V2 (https://arxiv.org/abs/1807.11164) and 
+            The idea of partial channels is from ShuffleNet V2 (https://arxiv.org/abs/1807.11164) and 
             also used by InceptionNeXt (https://arxiv.org/abs/2303.16900) and FasterNet (https://arxiv.org/abs/2303.03667)
     """
-    def __init__(self, dim, expension_ratio=8/3, kernel_size=7, conv_ratio=1.0,
+    def __init__(self, dim, expansion_ratio=8/3, kernel_size=7, conv_ratio=1.0,
                  norm_layer=partial(nn.LayerNorm,eps=1e-6), 
                  act_layer=nn.GELU,
                  drop_path=0.,
                  **kwargs):
         super().__init__()
         self.norm = norm_layer(dim)
-        hidden = int(expension_ratio * dim)
+        hidden = int(expansion_ratio * dim)
         self.fc1 = nn.Linear(dim, hidden * 2)
         self.act = act_layer()
         conv_channels = int(conv_ratio * dim)

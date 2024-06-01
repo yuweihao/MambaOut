@@ -22,7 +22,7 @@
 This is a PyTorch implementation of MambaOut proposed by our paper "[MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992)". 
 
 ## Updates
-* 20 May 2024: Release MambaOut-Kobe model version with 24 Gated CNN blocks suggested by [Issue #5](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019). **MambaOut-Kobe outperforms ViT-S by 0.2% accuracy with only 41% parameters and 33% FLOPs**. See [Models](#models).
+* 20 May 2024: As suggested by [Issue #5](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019), we release **MambaOut-Kobe** model version with **24** Gated CNN blocks, achieving **8**0.0% accuracy on ImageNet. MambaOut-Kobe outperforms ViT-S by 0.2% accuracy with only 41% parameters and 33% FLOPs. See [Models](#models).
 
 * 18 May 2024: Add a [tutorial](https://github.com/yuweihao/MambaOut/issues/210) on counting Transformer FLOPs (Equation 6 in the paper).
 ---
@@ -117,7 +117,7 @@ DROP_PATH=0.2
 cd $CODE_PATH && sh distributed_train.sh $NUM_GPU $DATA_PATH \
 --model $MODEL --opt adamw --lr 4e-3 --warmup-epochs 20 \
 -b $BATCH_SIZE --grad-accum-steps $GRAD_ACCUM_STEPS \
---drop-path $DROP_PATH
+--drop-path $DROP_PATH # --native-amp # can also use --native-amp or --amp to acclerate training
 ```
 Training scripts of other models are shown in [scripts](/scripts/).
 
