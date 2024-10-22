@@ -22,6 +22,8 @@
 This is a PyTorch implementation of MambaOut proposed by our paper "[MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992)". 
 
 ## Updates
+* 22 October 2024: Huge thanks to Ross [@rwightman](https://github.com/rwightman) for integrating MambaOut into [pytorch-image-models](https://github.com/huggingface/pytorch-image-models) (timm) and developing the mambaout_rw model series. The impressive mambaout_base_plus_rw model (102M params), pretrained solely on ImageNet-12k, "*is matching or passing accuracy levels of ImageNet-22k pretrained ConvNeXt-Large (~200M params), it's not far from the best 22k trained ViT-Large (DeiT-III, ~300M params)*". Please see Ross's [article](https://huggingface.co/blog/rwightman/mambaout) for more details.
+
 * 20 May 2024: As suggested by [Issue #5](https://github.com/yuweihao/MambaOut/issues/5#issuecomment-2119555019), we release **MambaOut-Kobe** model version with **24** Gated CNN blocks, achieving **8**0.0% accuracy on ImageNet. MambaOut-Kobe outperforms ViT-S by 0.2% accuracy with only 41% parameters and 33% FLOPs. See [Models](#models).
 
 * 18 May 2024: Add a [tutorial](https://github.com/yuweihao/MambaOut/issues/210) on counting Transformer FLOPs (Equation 6 in the paper).
