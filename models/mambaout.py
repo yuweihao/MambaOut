@@ -120,7 +120,7 @@ class GatedCNNBlock(nn.Module):
     r""" Our implementation of Gated CNN Block: https://arxiv.org/pdf/1612.08083
     Args: 
         conv_ratio: control the number of channels to conduct depthwise convolution.
-            Conduct convolution on partial channels can improve paraitcal efficiency.
+            Conduct convolution on partial channels can improve practical efficiency.
             The idea of partial channels is from ShuffleNet V2 (https://arxiv.org/abs/1807.11164) and 
             also used by InceptionNeXt (https://arxiv.org/abs/2303.16900) and FasterNet (https://arxiv.org/abs/2303.03667)
     """

@@ -1,4 +1,4 @@
-# [MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992)
+# [MambaOut: Do We Really Need Mamba for Vision?](https://arxiv.org/abs/2405.07992) (CVPR 2025)
 
 <p align="center">
 <a href="https://arxiv.org/abs/2405.07992" alt="arXiv">
@@ -130,11 +130,11 @@ This [tutorial](https://github.com/yuweihao/MambaOut/issues/210) shows how to co
 
 ## Bibtex
 ```
-@article{yu2024mambaout,
+@inproceedings{yu2025mambaout,
   title={MambaOut: Do We Really Need Mamba for Vision?},
   author={Yu, Weihao and Wang, Xinchao},
-  journal={arXiv preprint arXiv:2405.07992},
-  year={2024}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025}
 }
 ```
 
